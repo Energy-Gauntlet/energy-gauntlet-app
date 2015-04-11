@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C800FAB51AD96380006D10DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800FAB41AD96380006D10DA /* AppDelegate.swift */; };
-		C800FAB71AD96380006D10DA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800FAB61AD96380006D10DA /* MasterViewController.swift */; };
-		C800FAB91AD96380006D10DA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800FAB81AD96380006D10DA /* DetailViewController.swift */; };
 		C800FABC1AD96380006D10DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C800FABA1AD96380006D10DA /* Main.storyboard */; };
 		C800FABE1AD96380006D10DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C800FABD1AD96380006D10DA /* Images.xcassets */; };
 		C800FAC11AD96380006D10DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C800FABF1AD96380006D10DA /* LaunchScreen.xib */; };
 		C800FACD1AD96380006D10DA /* EnergyGauntletControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800FACC1AD96380006D10DA /* EnergyGauntletControlTests.swift */; };
+		C8CDE1AD1AD96E99003E3079 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CDE1AC1AD96E99003E3079 /* ExternalAccessory.framework */; };
+		C8CDE1B01AD96F01003E3079 /* DoubleControlSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CDE1AF1AD96F01003E3079 /* DoubleControlSDK.framework */; };
+		C8CDE1B81AD97181003E3079 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CDE1B71AD97181003E3079 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +31,17 @@
 		C800FAAF1AD96380006D10DA /* EnergyGauntletControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyGauntletControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C800FAB31AD96380006D10DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C800FAB41AD96380006D10DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C800FAB61AD96380006D10DA /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		C800FAB81AD96380006D10DA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C800FABB1AD96380006D10DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C800FABD1AD96380006D10DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C800FAC01AD96380006D10DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C800FAC61AD96380006D10DA /* EnergyGauntletControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyGauntletControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C800FACB1AD96380006D10DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C800FACC1AD96380006D10DA /* EnergyGauntletControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyGauntletControlTests.swift; sourceTree = "<group>"; };
+		C8CDE1AC1AD96E99003E3079 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		C8CDE1AE1AD96E99003E3079 /* EnergyGauntletControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EnergyGauntletControl.entitlements; sourceTree = "<group>"; };
+		C8CDE1AF1AD96F01003E3079 /* DoubleControlSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubleControlSDK.framework; sourceTree = "<group>"; };
+		C8CDE1B21AD9709E003E3079 /* EnergyGauntletControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnergyGauntletControl-Bridging-Header.h"; sourceTree = "<group>"; };
+		C8CDE1B71AD97181003E3079 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CDE1B01AD96F01003E3079 /* DoubleControlSDK.framework in Frameworks */,
+				C8CDE1AD1AD96E99003E3079 /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,9 +67,12 @@
 		C800FAA61AD9637F006D10DA = {
 			isa = PBXGroup;
 			children = (
+				C8CDE1AF1AD96F01003E3079 /* DoubleControlSDK.framework */,
+				C8CDE1AC1AD96E99003E3079 /* ExternalAccessory.framework */,
 				C800FAB11AD96380006D10DA /* EnergyGauntletControl */,
 				C800FAC91AD96380006D10DA /* EnergyGauntletControlTests */,
 				C800FAB01AD96380006D10DA /* Products */,
+				C8CDE1B21AD9709E003E3079 /* EnergyGauntletControl-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,9 +88,9 @@
 		C800FAB11AD96380006D10DA /* EnergyGauntletControl */ = {
 			isa = PBXGroup;
 			children = (
+				C8CDE1AE1AD96E99003E3079 /* EnergyGauntletControl.entitlements */,
 				C800FAB41AD96380006D10DA /* AppDelegate.swift */,
-				C800FAB61AD96380006D10DA /* MasterViewController.swift */,
-				C800FAB81AD96380006D10DA /* DetailViewController.swift */,
+				C8CDE1B71AD97181003E3079 /* MainViewController.swift */,
 				C800FABA1AD96380006D10DA /* Main.storyboard */,
 				C800FABD1AD96380006D10DA /* Images.xcassets */,
 				C800FABF1AD96380006D10DA /* LaunchScreen.xib */,
@@ -164,6 +173,12 @@
 				TargetAttributes = {
 					C800FAAE1AD96380006D10DA = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = T6QP7C9Q2D;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 					C800FAC51AD96380006D10DA = {
 						CreatedOnToolsVersion = 6.2;
@@ -215,9 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C800FAB91AD96380006D10DA /* DetailViewController.swift in Sources */,
-				C800FAB71AD96380006D10DA /* MasterViewController.swift in Sources */,
 				C800FAB51AD96380006D10DA /* AppDelegate.swift in Sources */,
+				C8CDE1B81AD97181003E3079 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +356,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EnergyGauntletControl/EnergyGauntletControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EnergyGauntletControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EnergyGauntletControl-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +377,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EnergyGauntletControl/EnergyGauntletControl.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EnergyGauntletControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EnergyGauntletControl-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +446,7 @@
 				C800FAD21AD96380006D10DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C800FAD31AD96380006D10DA /* Build configuration list for PBXNativeTarget "EnergyGauntletControlTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +455,7 @@
 				C800FAD51AD96380006D10DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
