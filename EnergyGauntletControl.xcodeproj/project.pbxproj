@@ -15,6 +15,7 @@
 		C8CDE1AD1AD96E99003E3079 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CDE1AC1AD96E99003E3079 /* ExternalAccessory.framework */; };
 		C8CDE1B01AD96F01003E3079 /* DoubleControlSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CDE1AF1AD96F01003E3079 /* DoubleControlSDK.framework */; };
 		C8CDE1B81AD97181003E3079 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CDE1B71AD97181003E3079 /* MainViewController.swift */; };
+		C8CDE1BA1AD98B8C003E3079 /* GauntletWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CDE1B91AD98B8C003E3079 /* GauntletWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		C8CDE1AF1AD96F01003E3079 /* DoubleControlSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubleControlSDK.framework; sourceTree = "<group>"; };
 		C8CDE1B21AD9709E003E3079 /* EnergyGauntletControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnergyGauntletControl-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8CDE1B71AD97181003E3079 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C8CDE1B91AD98B8C003E3079 /* GauntletWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GauntletWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				C8CDE1AE1AD96E99003E3079 /* EnergyGauntletControl.entitlements */,
 				C800FAB41AD96380006D10DA /* AppDelegate.swift */,
 				C8CDE1B71AD97181003E3079 /* MainViewController.swift */,
+				C8CDE1B91AD98B8C003E3079 /* GauntletWebService.swift */,
 				C800FABA1AD96380006D10DA /* Main.storyboard */,
 				C800FABD1AD96380006D10DA /* Images.xcassets */,
 				C800FABF1AD96380006D10DA /* LaunchScreen.xib */,
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C800FAB51AD96380006D10DA /* AppDelegate.swift in Sources */,
+				C8CDE1BA1AD98B8C003E3079 /* GauntletWebService.swift in Sources */,
 				C8CDE1B81AD97181003E3079 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
