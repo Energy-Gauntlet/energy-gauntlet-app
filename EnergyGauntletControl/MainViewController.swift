@@ -3,6 +3,7 @@ import UIKit
 class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebServiceDelegate {
 
     let webService = GauntletWebService()
+    var runPollService = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,38 +11,37 @@ class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebS
         webService.delegate = self;
         DRDouble.sharedDouble().delegate = self
         
-        webService.start()
     }
-    
-    func doubleDidConnect(theDouble: DRDouble!) {
-    }
-    
-    func doubleStatusDidUpdate(theDouble: DRDouble!) {
-    }
-    
+
     func doubleDriveShouldUpdate(theDouble: DRDouble!) {
         DRDouble.sharedDouble().drive(DRDriveDirection.Stop, turn: 1.0)
+        
+        //    - (void)doubleDriveShouldUpdate:(DRDouble *)theDouble {
+        //    float drive = (driveForwardButton.highlighted) ? kDRDriveDirectionForward : ((driveBackwardButton.highlighted) ? kDRDriveDirectionBackward : kDRDriveDirectionStop);
+        //    float turn = (driveRightButton.highlighted) ? 1.0 : ((driveLeftButton.highlighted) ? -1.0 : 0.0);
+        //    [theDouble drive:drive turn:turn];
+        //    }
+        //
     }
     
-    func doubleTravelDataDidUpdate(theDouble: DRDouble!) {
-    }
-    
-    
-//    - (void)doubleDriveShouldUpdate:(DRDouble *)theDouble {
-//    float drive = (driveForwardButton.highlighted) ? kDRDriveDirectionForward : ((driveBackwardButton.highlighted) ? kDRDriveDirectionBackward : kDRDriveDirectionStop);
-//    float turn = (driveRightButton.highlighted) ? 1.0 : ((driveLeftButton.highlighted) ? -1.0 : 0.0);
-//    [theDouble drive:drive turn:turn];
-//    }
-//
     func serviceDidUpdate(commands: NSArray) {
         println(commands)
-    }
-    
-    
-    @IBAction func updateState(sender: AnyObject) {
+        if (runPollService) {
+            webService.poll()
+        }
     }
     
     // MARK: - buttons
+
+    @IBAction func startPoll(sender: AnyObject) {
+        runPollService = true
+        webService.poll()
+    }
+    
+    @IBAction func stopPoll(sender: AnyObject) {
+        //also clear command state here
+        runPollService = false
+    }
     
     @IBAction func moveStandUp(sender: AnyObject) {
         DRDouble.sharedDouble().poleUp()

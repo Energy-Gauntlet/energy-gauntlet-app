@@ -10,18 +10,16 @@ class GauntletWebService {
     static let urlPath: String = "http://energy-gauntlet.mybluemix.net/what-should-i-do?"
     let url: NSURL = NSURL(string: urlPath)!
     
-    func start() {
-        //start start a recurring loop in GCD
-        //in loop, call getServiceState
-        //then call delegate servicedidupdate
-        var commands: NSArray = self.getServiceState()
-        delegate?.serviceDidUpdate(commands)
+    func poll() {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            var commands: NSArray = self.getServiceState()
+            if commands.count < 1 {
+                return;
+            }
+            self.delegate?.serviceDidUpdate(commands)
+        });
     }
-    
-    func stop() {
-        //stop the GCD thread
-    }
-    
+        
     func getServiceState() -> NSArray {
         var request: NSURLRequest = NSURLRequest(URL: self.url)
         var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil

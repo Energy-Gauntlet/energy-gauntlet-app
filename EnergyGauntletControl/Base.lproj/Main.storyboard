@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvn-Is-QRo">
-                                <rect key="frame" x="277" y="105" width="30" height="30"/>
+                                <rect key="frame" x="277" y="233" width="30" height="30"/>
                                 <state key="normal" title="UP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grr-2e-bSm">
-                                <rect key="frame" x="269" y="172" width="48" height="30"/>
+                                <rect key="frame" x="269" y="300" width="48" height="30"/>
                                 <state key="normal" title="DOWN">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-pc-IMo">
-                                <rect key="frame" x="249" y="252" width="89" height="30"/>
+                                <rect key="frame" x="249" y="380" width="89" height="30"/>
                                 <state key="normal" title="KickstandUp">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-nw-nC5">
-                                <rect key="frame" x="239" y="326" width="108" height="30"/>
+                                <rect key="frame" x="239" y="454" width="108" height="30"/>
                                 <state key="normal" title="KickstandDown">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,19 +54,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-o1-Gy5">
-                                <rect key="frame" x="240" y="45" width="107" height="30"/>
-                                <state key="normal" title="UPDATE STATE">
+                                <rect key="frame" x="240" y="45" width="84" height="30"/>
+                                <state key="normal" title="Start Polling">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="updateState:" destination="aa5-xF-F2I" eventType="touchUpInside" id="1zV-Uj-Zwj"/>
+                                    <action selector="startPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="1eF-LM-O4X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Hl-ZPZ">
+                                <rect key="frame" x="240" y="89" width="84" height="30"/>
+                                <state key="normal" title="Stop Polling">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ybX-Ml-GBe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="grr-2e-bSm" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="253" id="2aT-ey-C37"/>
-                            <constraint firstItem="Nvn-Is-QRo" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="85" id="6PS-zW-3WA"/>
+                            <constraint firstItem="Nvn-Is-QRo" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="213" id="6PS-zW-3WA"/>
                             <constraint firstItem="grr-2e-bSm" firstAttribute="top" secondItem="Nvn-Is-QRo" secondAttribute="bottom" constant="37" id="RTz-jd-iLg"/>
                             <constraint firstItem="gnI-nw-nC5" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="223" id="XmR-UK-h66"/>
                             <constraint firstItem="dXM-pc-IMo" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="233" id="aYB-L4-1jU"/>
