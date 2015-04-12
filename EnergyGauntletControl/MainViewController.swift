@@ -47,7 +47,7 @@ class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebS
         case "retractKickstands":
             retractKickstands()
         case "variableDrive":
-            updateDriveState(command["values"] as! NSDictionary)
+            updateDriveState(command["params"] as! NSDictionary)
         default:
             println("BROKEN")
         }
