@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebServiceDelegate {
 
@@ -48,9 +49,22 @@ class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebS
             retractKickstands()
         case "variableDrive":
             updateDriveState(command["params"] as! NSDictionary)
+        case "speak":
+            sayWords(command["params"] as! NSDictionary)
         default:
             println("BROKEN")
         }
+    }
+    
+    func sayWords(params: NSDictionary) {
+        var words:String = params["string"] as! String
+
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            var speech = AVSpeechSynthesizer()
+            var utterance = AVSpeechUtterance(string: words)
+            AVSpeechSynthesisVoice(language: "en-US")
+            speech.speakUtterance(utterance)
+        });
     }
 
     // MARK: - commands
@@ -88,6 +102,7 @@ class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebS
     @IBAction func startPoll(sender: AnyObject) {
         runPollService = true
         webService.poll()
+        
     }
     
     @IBAction func stopPoll(sender: AnyObject) {
