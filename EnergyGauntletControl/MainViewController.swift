@@ -4,6 +4,7 @@ class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebS
 
     let webService = GauntletWebService()
     var runPollService = false
+    var driveState = DriveState()    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,50 +13,93 @@ class MainViewController: UIKit.UIViewController, DRDoubleDelegate, GauntletWebS
         DRDouble.sharedDouble().delegate = self
         
     }
-
-    func doubleDriveShouldUpdate(theDouble: DRDouble!) {
-        DRDouble.sharedDouble().drive(DRDriveDirection.Stop, turn: 1.0)
-        
-        //    - (void)doubleDriveShouldUpdate:(DRDouble *)theDouble {
-        //    float drive = (driveForwardButton.highlighted) ? kDRDriveDirectionForward : ((driveBackwardButton.highlighted) ? kDRDriveDirectionBackward : kDRDriveDirectionStop);
-        //    float turn = (driveRightButton.highlighted) ? 1.0 : ((driveLeftButton.highlighted) ? -1.0 : 0.0);
-        //    [theDouble drive:drive turn:turn];
-        //    }
-        //
-    }
     
     func serviceDidUpdate(commands: NSArray) {
-        println(commands)
+        
+        for command in commands {
+            updateRobotState(command as! NSDictionary)
+        }
+
         if (runPollService) {
             webService.poll()
         }
     }
     
-    // MARK: - buttons
+    
+    func doubleDriveShouldUpdate(theDouble: DRDouble!) {
+        DRDouble.sharedDouble().variableDrive(driveState.driveDirection, turn: driveState.turnDirection)
+    }
+    
+    // MARK: - robot commands
+    func updateRobotState(command: NSDictionary) {
+        println(command)
+        var command_type:String = command["type"] as! String
+        
+        switch command_type {
+        case "poleUp":
+            poleUp()
+        case "poleStop":
+            poleStop()
+        case "poleDown":
+            poleDown()
+        case "deployKickstands":
+            deployKickstands()
+        case "retractKickstands":
+            retractKickstands()
+        case "variableDrive":
+            updateDriveState(command["values"] as! NSDictionary)
+        default:
+            println("BROKEN")
+        }
+    }
 
+    // MARK: - commands
+    func updateDriveState(values: NSDictionary) {
+        driveState.driveDirection = values["forwardBack"] as! Float
+        driveState.turnDirection = values["leftRight"] as! Float
+    }
+    
+    func poleUp() {
+        println("moving pole up")
+        DRDouble.sharedDouble().poleUp()
+    }
+    
+    func poleDown() {
+        println("moving pole down")
+        DRDouble.sharedDouble().poleDown()
+    }
+    
+    func poleStop() {
+        println("stop that pole")
+        DRDouble.sharedDouble().poleStop()
+    }
+    
+    func deployKickstands() {
+        println("kickstands down")
+        DRDouble.sharedDouble().deployKickstands()
+    }
+    
+    func retractKickstands() {
+        println("kickstands up")
+        DRDouble.sharedDouble().retractKickstands()
+    }
+
+    // MARK: - buttons
     @IBAction func startPoll(sender: AnyObject) {
         runPollService = true
         webService.poll()
     }
     
     @IBAction func stopPoll(sender: AnyObject) {
-        //also clear command state here
         runPollService = false
-    }
-    
-    @IBAction func moveStandUp(sender: AnyObject) {
-        DRDouble.sharedDouble().poleUp()
-    }
-    
-    @IBAction func moveStandDown(sender: AnyObject) {
-        DRDouble.sharedDouble().poleDown()
+        driveState.stopAll()
     }
     
     @IBAction func kickstandUp(sender: AnyObject) {
-        DRDouble.sharedDouble().retractKickstands()
+        retractKickstands()
     }
     @IBAction func kickstandDown(sender: AnyObject) {
-        DRDouble.sharedDouble().deployKickstands()
+        deployKickstands()
     }
 
 }

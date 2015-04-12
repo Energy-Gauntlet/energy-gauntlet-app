@@ -17,35 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvn-Is-QRo">
-                                <rect key="frame" x="277" y="233" width="30" height="30"/>
-                                <state key="normal" title="UP">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="moveStandUp:" destination="aa5-xF-F2I" eventType="touchUpInside" id="JTu-Wt-oSg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grr-2e-bSm">
-                                <rect key="frame" x="269" y="300" width="48" height="30"/>
-                                <state key="normal" title="DOWN">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="moveStandDown:" destination="aa5-xF-F2I" eventType="touchUpInside" id="fJE-rh-YVu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-pc-IMo">
-                                <rect key="frame" x="249" y="380" width="89" height="30"/>
-                                <state key="normal" title="KickstandUp">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="kickstandUp:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ZxM-fI-JU7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-nw-nC5">
-                                <rect key="frame" x="239" y="454" width="108" height="30"/>
+                                <rect key="frame" x="476" y="550" width="108" height="30"/>
                                 <state key="normal" title="KickstandDown">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -53,36 +26,51 @@
                                     <action selector="kickstandDown:" destination="aa5-xF-F2I" eventType="touchUpInside" id="8Vb-yw-Gu5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-o1-Gy5">
-                                <rect key="frame" x="240" y="45" width="84" height="30"/>
-                                <state key="normal" title="Start Polling">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="1eF-LM-O4X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Hl-ZPZ">
-                                <rect key="frame" x="240" y="89" width="84" height="30"/>
-                                <state key="normal" title="Stop Polling">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Hl-ZPZ">
+                                <rect key="frame" x="314" y="135" width="250" height="250"/>
+                                <state key="normal" image="StopSign">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="stopPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ybX-Ml-GBe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-pc-IMo">
+                                <rect key="frame" x="486" y="520" width="89" height="30"/>
+                                <state key="normal" title="KickstandUp">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="kickstandUp:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ZxM-fI-JU7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-o1-Gy5">
+                                <rect key="frame" x="41" y="135" width="250" height="250"/>
+                                <state key="normal" image="GoSign">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="1eF-LM-O4X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="grr-2e-bSm" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="253" id="2aT-ey-C37"/>
-                            <constraint firstItem="Nvn-Is-QRo" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="213" id="6PS-zW-3WA"/>
-                            <constraint firstItem="grr-2e-bSm" firstAttribute="top" secondItem="Nvn-Is-QRo" secondAttribute="bottom" constant="37" id="RTz-jd-iLg"/>
-                            <constraint firstItem="gnI-nw-nC5" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="223" id="XmR-UK-h66"/>
+                            <constraint firstItem="XYH-o1-Gy5" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="115" id="C0z-IG-YE5"/>
+                            <constraint firstItem="Uyo-1I-vha" firstAttribute="top" secondItem="gnI-nw-nC5" secondAttribute="bottom" constant="20" id="CCv-Ty-GkW"/>
+                            <constraint firstItem="oY1-Hl-ZPZ" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="115" id="LxT-ao-9e1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oY1-Hl-ZPZ" secondAttribute="trailing" constant="20" id="SsI-C5-ep1"/>
                             <constraint firstItem="dXM-pc-IMo" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="233" id="aYB-L4-1jU"/>
-                            <constraint firstItem="dXM-pc-IMo" firstAttribute="top" secondItem="grr-2e-bSm" secondAttribute="bottom" constant="50" id="kL8-SD-s6U"/>
-                            <constraint firstItem="gnI-nw-nC5" firstAttribute="top" secondItem="dXM-pc-IMo" secondAttribute="bottom" constant="44" id="nRH-s3-0Iq"/>
-                            <constraint firstItem="Nvn-Is-QRo" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="261" id="t36-RI-bcM"/>
+                            <constraint firstItem="XYH-o1-Gy5" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="25" id="beC-u9-E6l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dXM-pc-IMo" secondAttribute="trailing" constant="9" id="bia-h6-S4a"/>
+                            <constraint firstItem="gnI-nw-nC5" firstAttribute="top" secondItem="dXM-pc-IMo" secondAttribute="bottom" id="ezM-dA-zX0"/>
+                            <constraint firstItem="gnI-nw-nC5" firstAttribute="trailing" secondItem="Ktf-6X-QWf" secondAttribute="trailingMargin" id="lt5-zH-p41"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aYB-L4-1jU"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iz-07-Hmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,4 +78,8 @@
             <point key="canvasLocation" x="804" y="-655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GoSign" width="250" height="250"/>
+        <image name="StopSign" width="250" height="250"/>
+    </resources>
 </document>

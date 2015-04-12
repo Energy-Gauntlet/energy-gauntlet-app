@@ -12,6 +12,7 @@
 		C800FABE1AD96380006D10DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C800FABD1AD96380006D10DA /* Images.xcassets */; };
 		C800FAC11AD96380006D10DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C800FABF1AD96380006D10DA /* LaunchScreen.xib */; };
 		C800FACD1AD96380006D10DA /* EnergyGauntletControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800FACC1AD96380006D10DA /* EnergyGauntletControlTests.swift */; };
+		C8823D711ADAB58F00CEB0FF /* DriveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8823D701ADAB58F00CEB0FF /* DriveState.swift */; };
 		C8CDE1AD1AD96E99003E3079 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CDE1AC1AD96E99003E3079 /* ExternalAccessory.framework */; };
 		C8CDE1B01AD96F01003E3079 /* DoubleControlSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CDE1AF1AD96F01003E3079 /* DoubleControlSDK.framework */; };
 		C8CDE1B81AD97181003E3079 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CDE1B71AD97181003E3079 /* MainViewController.swift */; };
@@ -38,6 +39,7 @@
 		C800FAC61AD96380006D10DA /* EnergyGauntletControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyGauntletControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C800FACB1AD96380006D10DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C800FACC1AD96380006D10DA /* EnergyGauntletControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyGauntletControlTests.swift; sourceTree = "<group>"; };
+		C8823D701ADAB58F00CEB0FF /* DriveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveState.swift; sourceTree = "<group>"; };
 		C8CDE1AC1AD96E99003E3079 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		C8CDE1AE1AD96E99003E3079 /* EnergyGauntletControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EnergyGauntletControl.entitlements; sourceTree = "<group>"; };
 		C8CDE1AF1AD96F01003E3079 /* DoubleControlSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DoubleControlSDK.framework; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				C8CDE1AE1AD96E99003E3079 /* EnergyGauntletControl.entitlements */,
 				C800FAB41AD96380006D10DA /* AppDelegate.swift */,
 				C8CDE1B71AD97181003E3079 /* MainViewController.swift */,
+				C8823D701ADAB58F00CEB0FF /* DriveState.swift */,
 				C8CDE1B91AD98B8C003E3079 /* GauntletWebService.swift */,
 				C800FABA1AD96380006D10DA /* Main.storyboard */,
 				C800FABD1AD96380006D10DA /* Images.xcassets */,
@@ -235,6 +238,7 @@
 			files = (
 				C800FAB51AD96380006D10DA /* AppDelegate.swift in Sources */,
 				C8CDE1BA1AD98B8C003E3079 /* GauntletWebService.swift in Sources */,
+				C8823D711ADAB58F00CEB0FF /* DriveState.swift in Sources */,
 				C8CDE1B81AD97181003E3079 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
