@@ -14,34 +14,16 @@
                         <viewControllerLayoutGuide type="bottom" id="Uyo-1I-vha"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ktf-6X-QWf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-nw-nC5">
-                                <rect key="frame" x="476" y="550" width="108" height="30"/>
+                                <rect key="frame" x="644" y="974" width="108" height="30"/>
                                 <state key="normal" title="KickstandDown">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="kickstandDown:" destination="aa5-xF-F2I" eventType="touchUpInside" id="8Vb-yw-Gu5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Hl-ZPZ">
-                                <rect key="frame" x="314" y="135" width="250" height="250"/>
-                                <state key="normal" image="StopSign">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ybX-Ml-GBe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-pc-IMo">
-                                <rect key="frame" x="486" y="520" width="89" height="30"/>
-                                <state key="normal" title="KickstandUp">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="kickstandUp:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ZxM-fI-JU7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-o1-Gy5">
@@ -53,17 +35,51 @@
                                     <action selector="startPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="1eF-LM-O4X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Hl-ZPZ">
+                                <rect key="frame" x="482" y="135" width="250" height="250"/>
+                                <state key="normal" image="StopSign">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopPoll:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ybX-Ml-GBe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-pc-IMo">
+                                <rect key="frame" x="654" y="944" width="89" height="30"/>
+                                <state key="normal" title="KickstandUp">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="kickstandUp:" destination="aa5-xF-F2I" eventType="touchUpInside" id="ZxM-fI-JU7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCN-Ok-tXA">
+                                <rect key="frame" x="289" y="403" width="200" height="239"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👄" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOE-fh-3F8">
+                                <rect key="frame" x="239" y="689" width="300" height="358"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="300"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aCN-Ok-tXA" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="273" id="7ff-CL-98u"/>
                             <constraint firstItem="XYH-o1-Gy5" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="115" id="C0z-IG-YE5"/>
                             <constraint firstItem="Uyo-1I-vha" firstAttribute="top" secondItem="gnI-nw-nC5" secondAttribute="bottom" constant="20" id="CCv-Ty-GkW"/>
+                            <constraint firstItem="aCN-Ok-tXA" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="383" id="GYs-th-3oc"/>
                             <constraint firstItem="oY1-Hl-ZPZ" firstAttribute="top" secondItem="Li6-If-DX5" secondAttribute="bottom" constant="115" id="LxT-ao-9e1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oY1-Hl-ZPZ" secondAttribute="trailing" constant="20" id="SsI-C5-ep1"/>
                             <constraint firstItem="dXM-pc-IMo" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="233" id="aYB-L4-1jU"/>
                             <constraint firstItem="XYH-o1-Gy5" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="25" id="beC-u9-E6l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dXM-pc-IMo" secondAttribute="trailing" constant="9" id="bia-h6-S4a"/>
+                            <constraint firstItem="AOE-fh-3F8" firstAttribute="top" secondItem="aCN-Ok-tXA" secondAttribute="bottom" constant="47" id="efe-7Q-NbZ"/>
                             <constraint firstItem="gnI-nw-nC5" firstAttribute="top" secondItem="dXM-pc-IMo" secondAttribute="bottom" id="ezM-dA-zX0"/>
+                            <constraint firstItem="AOE-fh-3F8" firstAttribute="leading" secondItem="Ktf-6X-QWf" secondAttribute="leadingMargin" constant="223" id="hKA-zT-XQ4"/>
                             <constraint firstItem="gnI-nw-nC5" firstAttribute="trailing" secondItem="Ktf-6X-QWf" secondAttribute="trailingMargin" id="lt5-zH-p41"/>
                         </constraints>
                         <variation key="default">
@@ -72,10 +88,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iz-07-Hmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-655"/>
+            <point key="canvasLocation" x="808" y="-613"/>
         </scene>
     </scenes>
     <resources>
